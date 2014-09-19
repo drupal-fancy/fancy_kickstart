@@ -28,7 +28,3 @@ dependencies[] = module_filter
 dependencies[] = pathauto
 dependencies[] = pathologic
 dependencies[] = transliteration
-
-; Reqired themes (contrib)
-dependencies[] = responsive_bartik
-dependencies[] = shiny
