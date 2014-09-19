@@ -1,0 +1,11 @@
+name = Fancy Page
+description = Example node type for the fancy kickstart approach.
+core = 7.x
+package = Fancy Kickstart
+dependencies[] = entityreference
+dependencies[] = features
+dependencies[] = inline_entity_form
+features[features_api][] = api:2
+features[field_instance][] = node-fancy_page-field_fancy_rel_sections
+features[node][] = fancy_page
+features_exclude[field_base][field_fancy_rel_sections] = field_fancy_rel_sections

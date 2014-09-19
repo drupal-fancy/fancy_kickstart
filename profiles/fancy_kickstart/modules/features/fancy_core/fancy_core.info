@@ -1,0 +1,11 @@
+name = Fancy Core
+core = 7.x
+package = Fancy Kickstart
+dependencies[] = entityreference
+dependencies[] = features
+features[eck_entity_type][] = fancy_content
+features[eck_entity_type][] = fancy_section
+features[features_api][] = api:2
+features[field_base][] = field_fancy_rel_contents
+features[field_base][] = field_fancy_rel_sections
+features_exclude[dependencies][eck] = eck
