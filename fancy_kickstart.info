@@ -5,6 +5,7 @@ core = 7.x
 distribution_name = Fancy Kickstart
 
 ; Required modules (Core)
+dependencies[] = block
 dependencies[] = contextual
 dependencies[] = dblog
 dependencies[] = field_ui
