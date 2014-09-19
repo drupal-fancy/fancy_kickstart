@@ -27,6 +27,7 @@ projects[] = token
 
 ; Other
 projects[] = transliteration
+projects[] = final_polish
 
 ; Theme
 projects[] = responsive_bartik
