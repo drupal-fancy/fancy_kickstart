@@ -48,3 +48,4 @@ projects[inline_entity_form][patch][] = https://www.drupal.org/files/issues/inli
 projects[] = inline_entity_form_preview
 projects[] = strongarm
 projects[] = view_mode_selector
+projects[] = views_bulk_operations
