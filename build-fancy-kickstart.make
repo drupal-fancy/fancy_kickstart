@@ -2,7 +2,7 @@ core = 7.x
 api = 2
 
 ; Drupal core
-includes[] = http://cgit.drupalcode.org/fancy_kickstart/plain/drupal-org-core.make
+includes[] = drupal-org-core.make
 
 ; Installation profile
 projects[fancy_kickstart][type] = profile
