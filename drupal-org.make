@@ -5,6 +5,7 @@ defaults[projects][subdir] = contrib
 
 ; Administration
 projects[] = admin_menu
+projects[] = admin_views
 projects[] = backup_migrate
 projects[] = coffee
 projects[] = module_filter
