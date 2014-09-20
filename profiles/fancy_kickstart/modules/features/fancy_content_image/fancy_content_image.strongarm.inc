@@ -43,6 +43,9 @@ function fancy_content_image_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'inline_entity_form_preview' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),

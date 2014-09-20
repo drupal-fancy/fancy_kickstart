@@ -26,6 +26,16 @@ function fancy_section_simple_sections_field_default_field_instances() {
         'type' => 'entityreference_entity_view',
         'weight' => 0,
       ),
+      'inline_entity_form_preview' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'inline_entity_form_preview',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fancy_section',

@@ -26,6 +26,16 @@ function fancy_content_image_field_default_field_instances() {
         'type' => 'image',
         'weight' => 0,
       ),
+      'inline_entity_form_preview' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'thumbnail',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fancy_content',
