@@ -144,6 +144,13 @@ function fancy_kickstart_install() {
   // Update the menu router information.
   menu_rebuild();
 
+  // Enable theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'responsive_bartik')
+    ->execute();
+
   // Enable the admin theme.
   db_update('system')
     ->fields(array('status' => 1))
