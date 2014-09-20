@@ -32,3 +32,10 @@ projects[] = final_polish
 ; Theme
 projects[] = responsive_bartik
 projects[] = shiny
+
+; Fancy kickstart core
+projects[inline_entity_form][type] = module
+projects[inline_entity_form][download][type] = git
+projects[inline_entity_form][download][url] = http://git.drupal.org/project/inline_entity_form.git
+projects[inline_entity_form][download][branch] = "7.x-1.x"
+projects[inline_entity_form][patch][] = "https://www.drupal.org/files/issues/inline_entity_form-add_callback_field_type-2324901-2.patch"
