@@ -45,3 +45,4 @@ projects[inline_entity_form][version] = 1.x-dev
 projects[inline_entity_form][patch][] = https://www.drupal.org/files/issues/inline_entity_form-add_callback_field_type-2324901-2.patch
 projects[] = inline_entity_form_preview
 projects[] = strongarm
+projects[] = view_mode_selector
