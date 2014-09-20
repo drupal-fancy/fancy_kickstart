@@ -46,5 +46,5 @@ projects[] = strongarm
 
 projects[inline_entity_form][type] = module
 projects[inline_entity_form][download][type] = git
-projects[inline_entity_form][download][url] = http://git.drupal.org/project/inline_entity_form.git
+projects[inline_entity_form][download][url] = http://git.drupal.org/project/inline_entity_form_preview.git
 projects[inline_entity_form][download][branch] = 7.x-1.x
