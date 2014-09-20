@@ -1,5 +1,5 @@
-api = 2
 core = 7.31
+api = 2
 
 defaults[projects][subdir] = contrib
 
