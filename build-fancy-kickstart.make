@@ -1,8 +1,5 @@
 api = 2
-core = 7.x
-
-; Drupal core
-includes[] = drupal-org-core.make
+core = 7.31
 
 ; Installation profile
 projects[fancy_kickstart][type] = profile
