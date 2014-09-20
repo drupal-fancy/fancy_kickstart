@@ -13,6 +13,27 @@ function fancy_content_image_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_fancy_content_image';
+  $strongarm->value = '2';
+  $export['auto_entitylabel_fancy_content_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_pattern_fancy_content_image';
+  $strongarm->value = 'Image created by [current-user:name] at [current-user:created:short]';
+  $export['auto_entitylabel_pattern_fancy_content_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_php_fancy_content_image';
+  $strongarm->value = 0;
+  $export['auto_entitylabel_php_fancy_content_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_fancy_content__image';
   $strongarm->value = array(
     'view_modes' => array(
