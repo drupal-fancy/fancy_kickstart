@@ -1,7 +1,10 @@
-core = 7.31
+core = 7.x
 api = 2
 
 defaults[projects][subdir] = contrib
+
+; Core project
+projects[drupal][version] = 7.31
 
 ; Administration
 projects[] = admin_menu
