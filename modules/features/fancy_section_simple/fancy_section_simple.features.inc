@@ -27,6 +27,12 @@ function fancy_section_simple_eck_bundle_info() {
       'name' => '1_column',
       'label' => '1 Column',
     ),
+    'fancy_section_2_columns' => array(
+      'machine_name' => 'fancy_section_2_columns',
+      'entity_type' => 'fancy_section',
+      'name' => '2_columns',
+      'label' => '2 Columns',
+    ),
   );
   return $items;
 }
