@@ -34,4 +34,5 @@ dependencies[] = transliteration
 dependencies[] = fancy_core
 dependencies[] = fancy_page
 dependencies[] = fancy_content_image
+dependencies[] = fancy_content_text
 dependencies[] = fancy_section_simple
