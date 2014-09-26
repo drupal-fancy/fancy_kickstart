@@ -20,8 +20,8 @@ function fancy_page_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'links' => TRUE,
-          'view_mode' => 'default',
+          'links' => 1,
+          'view_mode' => 'view_mode_selector',
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 0,

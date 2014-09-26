@@ -38,3 +38,4 @@ dependencies[] = fancy_content_ctools_content
 dependencies[] = fancy_content_image
 dependencies[] = fancy_content_text
 dependencies[] = fancy_section_simple
+dependencies[] = fancy_section_responsive

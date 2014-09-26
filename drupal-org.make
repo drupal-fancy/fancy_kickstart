@@ -14,7 +14,7 @@ projects[] = coffee
 projects[] = module_filter
 
 ; Content
-projects[] = ds
+projects[ds][version] = 2.x-dev
 projects[] = ctools
 projects[] = views
 
@@ -45,6 +45,7 @@ projects[ctools_field][type] = module
 projects[ctools_field][download][type] = git
 projects[ctools_field][download][branch] = 7.x-1.x
 projects[] = eck
+projects[] = elements
 projects[] = entity
 projects[] = entityreference
 projects[] = features
@@ -55,6 +56,10 @@ projects[] = views_bulk_operations
 projects[ctools_field][type] = module
 projects[ctools_field][download][type] = git
 projects[ctools_field][download][branch] = 7.x-1.x
+
+projects[fancy_grid][type] = module
+projects[fancy_grid][download][type] = git
+projects[fancy_grid][download][branch] = 7.x-1.x
 
 projects[field_split][type] = module
 projects[field_split][download][type] = git
