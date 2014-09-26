@@ -5,6 +5,59 @@
  */
 
 /**
+ * Implements hook_install_tasks().
+ */
+function fancy_kickstart_install_tasks($install_state) {
+  $tasks = array(
+    'set_themes' => array(
+      'display_name' => st('Sets responsive_bartik as default theme and shiny as admin theme.'),
+      'display' => FALSE,
+      'type' => 'batch',
+      'run' => INSTALL_TASK_RUN_IF_REACHED,
+      'function' => '_fancy_kickstart_set_themes',
+    ),
+    'rever_features' => array(
+      'display_name' => st('Reverts all features.'),
+      'display' => FALSE,
+      'type' => 'batch',
+      'run' => INSTALL_TASK_RUN_IF_REACHED,
+      'function' => '_fancy_kickstart_rever_features',
+    ),
+  );
+  return $tasks;
+}
+
+/**
+ * Sets responsive_bartik as default theme and shiny as admin theme.
+ */
+function _fancy_kickstart_set_themes() {
+  $enable = array(
+    'theme_default' => 'responsive_bartik',
+    'admin_theme' => 'shiny',
+  );
+  theme_enable($enable);
+
+  foreach ($enable as $var => $theme) {
+    if (!is_numeric($var)) {
+      variable_set($var, $theme);
+    }
+  }
+
+  // Disable the default Bartik theme
+  theme_disable(array('bartik'));
+}
+
+/**
+ * Reverts all features.
+ */
+function _fancy_kickstart_rever_features() {
+  if (module_exists('features')) {
+    features_rebuild();
+    features_revert();
+  }
+}
+
+/**
  * Implements hook_install().
  *
  * Performs actions to set up the site for this profile.
@@ -143,23 +196,6 @@ function fancy_kickstart_install() {
 
   // Update the menu router information.
   menu_rebuild();
-
-  // Enable theme.
-  db_update('system')
-    ->fields(array('status' => 1))
-    ->condition('type', 'theme')
-    ->condition('name', 'responsive_bartik')
-    ->execute();
-
-  // Enable the admin theme.
-  db_update('system')
-    ->fields(array('status' => 1))
-    ->condition('type', 'theme')
-    ->condition('name', 'shiny')
-    ->execute();
-
-  variable_set('admin_theme', 'shiny');
-  variable_set('node_admin_theme', '1');
 
   // Module filter dynamic save button.
   variable_set('module_filter_dynamic_save_position', 1);

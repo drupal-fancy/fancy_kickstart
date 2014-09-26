@@ -4,4 +4,4 @@
  * Code for the Fancy Section Simple Sections feature.
  */
 
-include_once 'fancy_section_simple_sections.features.inc';
+include_once 'fancy_section_simple.features.inc';
