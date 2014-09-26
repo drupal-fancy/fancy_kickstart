@@ -1,6 +1,7 @@
 name = Fancy Kickstart
-description = A pre-configured Drupal.
+description = Start with a fancy website preconfigured Drupal website.
 core = 7.x
+exclusive = 1
 
 distribution_name = Fancy Kickstart
 
