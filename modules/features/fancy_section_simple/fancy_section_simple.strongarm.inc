@@ -109,5 +109,17 @@ function fancy_section_simple_strongarm() {
   );
   $export['field_bundle_settings_fancy_section__2_columns'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_split_config_fancy_section__2_columns';
+  $strongarm->value = array(
+    'field_fancy_rel_contents' => array(
+      'enable' => 1,
+      'values' => '2',
+    ),
+  );
+  $export['field_split_config_fancy_section__2_columns'] = $strongarm;
+
   return $export;
 }
