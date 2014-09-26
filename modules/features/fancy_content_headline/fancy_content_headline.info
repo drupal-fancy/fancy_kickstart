@@ -1,0 +1,14 @@
+name = Fancy Content Headline
+description = Provides a headline content element.
+core = 7.x
+package = Features
+dependencies[] = eck
+dependencies[] = features
+dependencies[] = filter
+dependencies[] = pathologic
+dependencies[] = text
+features[eck_bundle][] = fancy_content_headine
+features[features_api][] = api:2
+features[field_base][] = field_headline
+features[field_instance][] = fancy_content-headine-field_headline
+features[filter][] = fancy_headline
