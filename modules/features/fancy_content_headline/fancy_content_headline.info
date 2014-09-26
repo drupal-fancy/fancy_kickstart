@@ -1,7 +1,7 @@
 name = Fancy Content Headline
 description = Provides a headline content element.
 core = 7.x
-package = Features
+package = Fancy Kickstart
 dependencies[] = eck
 dependencies[] = features
 dependencies[] = filter
