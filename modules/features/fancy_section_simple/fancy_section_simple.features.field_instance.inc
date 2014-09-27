@@ -36,6 +36,15 @@ function fancy_section_simple_field_default_field_instances() {
         'type' => 'entityreference_entity_view',
         'weight' => 0,
       ),
+      'view_mode_selector' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fancy_section',
@@ -88,6 +97,12 @@ function fancy_section_simple_field_default_field_instances() {
           'view_mode' => 'inline_entity_form_preview',
         ),
         'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'view_mode_selector' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),

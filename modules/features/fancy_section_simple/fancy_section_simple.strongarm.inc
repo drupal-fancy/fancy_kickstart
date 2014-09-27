@@ -67,6 +67,15 @@ function fancy_section_simple_strongarm() {
       'inline_entity_form_preview' => array(
         'custom_settings' => TRUE,
       ),
+      'view_mode_selector' => array(
+        'custom_settings' => TRUE,
+      ),
+      '25_to_75' => array(
+        'custom_settings' => FALSE,
+      ),
+      '75_to_25' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),

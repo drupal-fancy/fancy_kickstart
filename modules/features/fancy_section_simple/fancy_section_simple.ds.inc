@@ -65,6 +65,9 @@ function fancy_section_simple_ds_layout_settings_info() {
     'fields' => array(
       'field_fancy_rel_contents' => 'ds_content',
     ),
+    'limit' => array(
+      'field_fancy_rel_contents' => '1',
+    ),
     'classes' => array(),
     'wrappers' => array(
       'ds_content' => 'div',
@@ -92,6 +95,9 @@ function fancy_section_simple_ds_layout_settings_info() {
     ),
     'fields' => array(
       'field_fancy_rel_contents' => 'ds_content',
+    ),
+    'limit' => array(
+      'field_fancy_rel_contents' => '1',
     ),
     'classes' => array(),
     'wrappers' => array(
