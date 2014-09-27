@@ -101,8 +101,11 @@ function fancy_section_simple_field_default_field_instances() {
       ),
       'view_mode_selector' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
         'weight' => 0,
       ),
     ),

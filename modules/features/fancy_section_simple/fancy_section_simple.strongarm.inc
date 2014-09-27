@@ -112,6 +112,10 @@ function fancy_section_simple_strongarm() {
             'weight' => '1',
             'visible' => TRUE,
           ),
+          'view_mode_selector' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
         ),
       ),
     ),
