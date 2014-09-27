@@ -31,12 +31,17 @@ dependencies[] = pathauto
 dependencies[] = pathologic
 dependencies[] = transliteration
 
-; Features
+; Fancy Features
 dependencies[] = fancy_core
 dependencies[] = fancy_page
+
+; Fancy Contents
 dependencies[] = fancy_content_ctools_content
+dependencies[] = fancy_content_headline
 dependencies[] = fancy_content_image
 dependencies[] = fancy_content_map
 dependencies[] = fancy_content_text
+
+; Fancy Sections
 dependencies[] = fancy_section_simple
 dependencies[] = fancy_section_responsive
