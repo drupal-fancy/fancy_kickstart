@@ -29,9 +29,9 @@ function fancy_kickstart_install_tasks($install_state) {
 }
 
 /**
- * Sets responsive_bartik as default theme and shiny as admin theme.
+ * Sets Responsive Bartik as default theme and Shiny as admin theme.
  */
-function _fancy_kickstart_set_themes() {
+function fancy_kickstart_set_themes() {
   $enable = array(
     'theme_default' => 'responsive_bartik',
     'admin_theme' => 'shiny',
@@ -39,19 +39,16 @@ function _fancy_kickstart_set_themes() {
   theme_enable($enable);
 
   foreach ($enable as $var => $theme) {
-    if (!is_numeric($var)) {
-      variable_set($var, $theme);
-    }
+    variable_set($var, $theme);
   }
 
-  // Disable the default Bartik theme
   theme_disable(array('bartik'));
 }
 
 /**
  * Reverts all features.
  */
-function _fancy_kickstart_rever_features() {
+function fancy_kickstart_revert_features() {
   if (module_exists('features')) {
     features_rebuild();
     features_revert();
