@@ -8,22 +8,23 @@
  * Implements hook_install_tasks().
  */
 function fancy_kickstart_install_tasks($install_state) {
-  $tasks = array(
-    'set_themes' => array(
-      'display_name' => st('Sets responsive_bartik as default theme and shiny as admin theme.'),
-      'display' => FALSE,
-      'type' => 'batch',
-      'run' => INSTALL_TASK_RUN_IF_REACHED,
-      'function' => '_fancy_kickstart_set_themes',
-    ),
-    'rever_features' => array(
-      'display_name' => st('Reverts all features.'),
-      'display' => FALSE,
-      'type' => 'batch',
-      'run' => INSTALL_TASK_RUN_IF_REACHED,
-      'function' => '_fancy_kickstart_rever_features',
-    ),
+  $tasks = array();
+
+  $tasks['fancy_kickstart_set_themes'] = array(
+    'type' => 'batch',
+    'display_name' => st('Sets responsive_bartik as default theme and shiny as admin theme.'),
+    'display' => FALSE,
+    'run' => INSTALL_TASK_RUN_IF_REACHED,
+   );
+
+  $tasks['fancy_kickstart_revert_features'] = array(
+    'type' => 'batch',
+    'display_name' => st('Reverts all features.'),
+    'display' => FALSE,
+    'run' => INSTALL_TASK_RUN_IF_REACHED,
   );
+  );
+
   return $tasks;
 }
 
