@@ -12,14 +12,12 @@ function fancy_kickstart_install_tasks($install_state) {
 
   $tasks['fancy_kickstart_set_themes'] = array(
     'type' => 'batch',
-    'display_name' => st('Sets responsive_bartik as default theme and shiny as admin theme.'),
     'display' => FALSE,
     'run' => INSTALL_TASK_RUN_IF_REACHED,
    );
 
   $tasks['fancy_kickstart_revert_features'] = array(
     'type' => 'batch',
-    'display_name' => st('Reverts all features.'),
     'display' => FALSE,
     'run' => INSTALL_TASK_RUN_IF_REACHED,
   );
@@ -29,7 +27,8 @@ function fancy_kickstart_install_tasks($install_state) {
 }
 
 /**
- * Sets Responsive Bartik as default theme and Shiny as admin theme.
+ * Task callback for setting Responsive Bartik as default theme
+ * and Shiny as admin theme.
  */
 function fancy_kickstart_set_themes() {
   $enable = array(
@@ -46,7 +45,7 @@ function fancy_kickstart_set_themes() {
 }
 
 /**
- * Reverts all features.
+ * Task callback for reverting all features.
  */
 function fancy_kickstart_revert_features() {
   if (module_exists('features')) {
