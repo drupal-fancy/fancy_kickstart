@@ -46,6 +46,8 @@ projects[] = elements
 projects[] = entity
 projects[] = entityreference
 projects[] = features
+projects[] = location
+projects[] = gmap
 projects[] = strongarm
 projects[] = views_bulk_operations
 
