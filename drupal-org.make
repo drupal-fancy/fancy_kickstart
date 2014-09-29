@@ -74,3 +74,9 @@ projects[inline_entity_form_preview][download][branch] = 7.x-1.x
 projects[view_mode_selector][type] = module
 projects[view_mode_selector][download][type] = git
 projects[view_mode_selector][download][branch] = 7.x-1.x
+
+; Libraries
+libraries[ckeditor][download][type] = git
+libraries[ckeditor][download][url] = https://github.com/ckeditor/ckeditor-releases.git
+libraries[ckeditor][download][tag] = full/4.4.1
+libraries[ckeditor][directory_name] = ckeditor
