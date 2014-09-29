@@ -10,9 +10,9 @@
 function fancy_section_simple_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'fancy_section-1_column-field_fancy_rel_contents'
-  $field_instances['fancy_section-1_column-field_fancy_rel_contents'] = array(
-    'bundle' => '1_column',
+  // Exported field_instance: 'fancy_section-simple-field_fancy_rel_contents'
+  $field_instances['fancy_section-simple-field_fancy_rel_contents'] = array(
+    'bundle' => 'simple',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -26,60 +26,157 @@ function fancy_section_simple_field_default_field_instances() {
         'type' => 'entityreference_entity_view',
         'weight' => 0,
       ),
-      'inline_entity_form_preview' => array(
+      'fancy_ds_2' => array(
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
           'links' => 0,
-          'view_mode' => 'inline_entity_form_preview',
+          'view_mode' => 'default',
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 0,
       ),
-      'view_mode_selector' => array(
-        'label' => 'above',
+      'fancy_ds_2_fluid' => array(
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'links' => 0,
+          'view_mode' => 'default',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 0,
       ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'fancy_section',
-    'field_name' => 'field_fancy_rel_contents',
-    'label' => 'Content',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'inline_entity_form',
-      'settings' => array(
-        'fields' => array(),
-        'type_settings' => array(
-          'allow_existing' => 1,
-          'delete_references' => 1,
-          'label_plural' => 'entities',
-          'label_singular' => 'entity',
-          'match_operator' => 'CONTAINS',
-          'override_labels' => 0,
+      'fancy_ds_2_stack' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
         ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
       ),
-      'type' => 'inline_entity_form',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'fancy_section-2_columns-field_fancy_rel_contents'
-  $field_instances['fancy_section-2_columns-field_fancy_rel_contents'] = array(
-    'bundle' => '2_columns',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
+      'fancy_ds_2_stack_fluid' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'fancy_ds_2col_fluid' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'fancy_ds_2col_stacked' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'fancy_ds_2col_stacked_fluid' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'fancy_ds_3' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'fancy_ds_3_stack' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'fancy_ds_3_stack_fluid' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'fancy_ds_3_weighted' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'fancy_ds_3col' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'fancy_ds_3col_stacked' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'fancy_ds_3col_stacked_equal' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'fancy_ds_3col_stacked_fluid' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'fancy_ds_4col' => array(
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
@@ -132,13 +229,156 @@ function fancy_section_simple_field_default_field_instances() {
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 2,
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'fancy_section-simple-field_fancy_view_mode_selector'
+  $field_instances['fancy_section-simple-field_fancy_view_mode_selector'] = array(
+    'bundle' => 'simple',
+    'default_value' => array(
+      0 => array(
+        'value' => 'default',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'fancy_ds_2' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'fancy_ds_2_fluid' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'fancy_ds_2_stack' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'fancy_ds_2_stack_fluid' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'fancy_ds_3' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'fancy_ds_3_stack' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'fancy_ds_3_stack_fluid' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'fancy_ds_3_weighted' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'inline_entity_form_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'view_mode_selector' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'fancy_section',
+    'field_name' => 'field_fancy_view_mode_selector',
+    'label' => 'View mode',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+      'view_modes' => array(
+        '25_to_75' => array(
+          'enable' => 0,
+        ),
+        '75_to_25' => array(
+          'enable' => 0,
+        ),
+        'default' => array(
+          'enable' => 1,
+        ),
+        'fancy_ds_2' => array(
+          'enable' => 1,
+        ),
+        'fancy_ds_2_fluid' => array(
+          'enable' => 1,
+        ),
+        'fancy_ds_2_stack' => array(
+          'enable' => 1,
+        ),
+        'fancy_ds_2_stack_fluid' => array(
+          'enable' => 1,
+        ),
+        'fancy_ds_3' => array(
+          'enable' => 1,
+        ),
+        'fancy_ds_3_stack' => array(
+          'enable' => 1,
+        ),
+        'fancy_ds_3_stack_fluid' => array(
+          'enable' => 1,
+        ),
+        'fancy_ds_3_weighted' => array(
+          'enable' => 1,
+        ),
+        'fancy_ds_4' => array(
+          'enable' => 1,
+        ),
+        'inline_entity_form_preview' => array(
+          'enable' => 0,
+        ),
+        'teaser' => array(
+          'enable' => 0,
+        ),
+        'token' => array(
+          'enable' => 0,
+        ),
+      ),
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'view_mode_selector',
+      'settings' => array(),
+      'type' => 'view_mode_selector_select',
+      'weight' => 1,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Content');
+  t('View mode');
 
   return $field_instances;
 }

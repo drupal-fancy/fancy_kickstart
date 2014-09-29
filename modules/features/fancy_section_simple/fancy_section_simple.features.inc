@@ -21,17 +21,11 @@ function fancy_section_simple_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function fancy_section_simple_eck_bundle_info() {
   $items = array(
-    'fancy_section_1_column' => array(
-      'machine_name' => 'fancy_section_1_column',
+    'fancy_section_simple' => array(
+      'machine_name' => 'fancy_section_simple',
       'entity_type' => 'fancy_section',
-      'name' => '1_column',
-      'label' => '1 column',
-    ),
-    'fancy_section_2_columns' => array(
-      'machine_name' => 'fancy_section_2_columns',
-      'entity_type' => 'fancy_section',
-      'name' => '2_columns',
-      'label' => '2 columns',
+      'name' => 'simple',
+      'label' => 'Simple',
     ),
   );
   return $items;
