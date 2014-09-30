@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * fancy_content_picture.default_breakpoint_group.inc
+ * fancy_config_media.default_breakpoint_group.inc
  */
 
 /**
  * Implements hook_default_breakpoint_group().
  */
-function fancy_content_picture_default_breakpoint_group() {
+function fancy_config_media_default_breakpoint_group() {
   $export = array();
 
   $breakpoint_group = new stdClass();

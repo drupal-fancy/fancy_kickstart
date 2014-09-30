@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * fancy_content_picture.default_picture_mapping.inc
+ * fancy_config_media.default_picture_mapping.inc
  */
 
 /**
  * Implements hook_default_picture_mapping().
  */
-function fancy_content_picture_default_picture_mapping() {
+function fancy_config_media_default_picture_mapping() {
   $export = array();
 
   $picture_mapping = new PictureMapping();
