@@ -10,33 +10,43 @@
 function fancy_section_responsive_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'fancy_section-2_columns_responsive-field_fancy_rel_contents'
-  $field_instances['fancy_section-2_columns_responsive-field_fancy_rel_contents'] = array(
-    'bundle' => '2_columns_responsive',
+  // Exported field_instance: 'fancy_section-responsive-field_fancy_rel_contents'
+  $field_instances['fancy_section-responsive-field_fancy_rel_contents'] = array(
+    'bundle' => 'responsive',
     'deleted' => 0,
     'description' => '',
     'display' => array(
-      '25_to_75' => array(
-        'label' => 'hidden',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 0,
-          'view_mode' => 'default',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 0,
-      ),
-      '75_to_25' => array(
-        'label' => 'hidden',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 0,
-          'view_mode' => 'default',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 0,
-      ),
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'fancy_grid_four_column' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'fancy_grid_three_column' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'fancy_grid_two_column' => array(
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
@@ -51,18 +61,19 @@ function fancy_section_responsive_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'links' => 0,
-          'view_mode' => 'default',
+          'view_mode' => 'inline_entity_form_preview',
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 0,
       ),
       'view_mode_selector' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'links' => 0,
+          'view_mode' => 'default',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 0,
       ),
     ),
@@ -89,64 +100,103 @@ function fancy_section_responsive_field_default_field_instances() {
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 2,
+      'weight' => 0,
     ),
   );
 
-  // Exported field_instance: 'fancy_section-2_columns_responsive-field_fancy_view_mode_selector'
-  $field_instances['fancy_section-2_columns_responsive-field_fancy_view_mode_selector'] = array(
-    'bundle' => '2_columns_responsive',
-    'default_value' => NULL,
+  // Exported field_instance: 'fancy_section-responsive-field_fancy_view_mode_selector'
+  $field_instances['fancy_section-responsive-field_fancy_view_mode_selector'] = array(
+    'bundle' => 'responsive',
+    'default_value' => array(
+      0 => array(
+        'value' => 'default',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
-      '25_to_75' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      '75_to_25' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
       'default' => array(
         'label' => 'above',
-        'module' => 'view_mode_selector',
         'settings' => array(),
-        'type' => 'view_mode_selector',
+        'type' => 'hidden',
         'weight' => 1,
+      ),
+      'fancy_grid_four_column' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'fancy_grid_three_column' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'fancy_grid_two_column' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'inline_entity_form_preview' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'view_mode_selector' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'fancy_section',
     'field_name' => 'field_fancy_view_mode_selector',
     'label' => 'View mode',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
       'view_modes' => array(
-        '25_to_75' => array(
-          'enable' => 1,
-        ),
-        '75_to_25' => array(
-          'enable' => 1,
-        ),
         'default' => array(
+          'enable' => 1,
+        ),
+        'fancy_ds_2' => array(
+          'enable' => 0,
+        ),
+        'fancy_ds_2_fluid' => array(
+          'enable' => 0,
+        ),
+        'fancy_ds_2_stack' => array(
+          'enable' => 0,
+        ),
+        'fancy_ds_2_stack_fluid' => array(
+          'enable' => 0,
+        ),
+        'fancy_ds_3' => array(
+          'enable' => 0,
+        ),
+        'fancy_ds_3_stack' => array(
+          'enable' => 0,
+        ),
+        'fancy_ds_3_stack_fluid' => array(
+          'enable' => 0,
+        ),
+        'fancy_ds_3_weighted' => array(
+          'enable' => 0,
+        ),
+        'fancy_ds_4' => array(
+          'enable' => 0,
+        ),
+        'fancy_grid_four_column' => array(
+          'enable' => 1,
+        ),
+        'fancy_grid_three_column' => array(
+          'enable' => 1,
+        ),
+        'fancy_grid_two_column' => array(
           'enable' => 1,
         ),
         'inline_entity_form_preview' => array(
@@ -165,7 +215,7 @@ function fancy_section_responsive_field_default_field_instances() {
       'module' => 'view_mode_selector',
       'settings' => array(),
       'type' => 'view_mode_selector_select',
-      'weight' => 3,
+      'weight' => 1,
     ),
   );
 

@@ -21,11 +21,11 @@ function fancy_section_responsive_ctools_plugin_api($module = NULL, $api = NULL)
  */
 function fancy_section_responsive_eck_bundle_info() {
   $items = array(
-    'fancy_section_2_columns_responsive' => array(
-      'machine_name' => 'fancy_section_2_columns_responsive',
+    'fancy_section_responsive' => array(
+      'machine_name' => 'fancy_section_responsive',
       'entity_type' => 'fancy_section',
-      'name' => '2_columns_responsive',
-      'label' => '2 Columns Responsive',
+      'name' => 'responsive',
+      'label' => 'Responsive',
     ),
   );
   return $items;
