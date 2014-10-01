@@ -51,6 +51,7 @@ projects[inline_entity_form][patch][] = https://www.drupal.org/files/issues/inli
 projects[] = location
 projects[media][version] = 2.x-dev
 projects[] = migrate
+projects[] = migrate_extras
 projects[] = picture
 projects[] = strongarm
 projects[] = views_bulk_operations
