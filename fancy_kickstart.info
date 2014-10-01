@@ -42,6 +42,7 @@ dependencies[] = fancy_content_image
 dependencies[] = fancy_content_map
 dependencies[] = fancy_content_picture
 dependencies[] = fancy_content_text
+dependencies[] = fancy_content_rich_text
 
 ; Fancy Sections
 dependencies[] = fancy_section_simple
