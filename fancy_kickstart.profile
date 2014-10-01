@@ -17,7 +17,7 @@ function fancy_kickstart_form_install_configure_form_alter(&$form, $form_state) 
   $form['site_information']['site_mail']['#default_value'] = 'admin@example.com';
 
   // Set a default country so we can benefit from it on Address Fields.
-  $form['server_settings']['site_default_country']['#default_value'] = 'US';
+  $form['server_settings']['site_default_country']['#default_value'] = 'DE';
 
     // Use "admin" as the default username.
   $form['admin_account']['account']['name']['#default_value'] = 'admin';
