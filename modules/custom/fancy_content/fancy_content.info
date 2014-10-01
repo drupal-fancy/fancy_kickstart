@@ -2,7 +2,6 @@ name = Fancy Content
 description = Provides some demo content for Fancy Kickstart.
 core = 7.x
 dependencies[] = migrate
-dependencies[] = migrate_extras
 package = Fancy Kickstart
 
 files[] = fancy_content.migrate.inc
