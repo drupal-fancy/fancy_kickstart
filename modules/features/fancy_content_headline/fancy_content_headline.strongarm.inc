@@ -13,21 +13,21 @@ function fancy_content_headline_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'auto_entitylabel_fancy_content_headine';
+  $strongarm->name = 'auto_entitylabel_fancy_content_headline';
   $strongarm->value = '2';
-  $export['auto_entitylabel_fancy_content_headine'] = $strongarm;
+  $export['auto_entitylabel_fancy_content_headline'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'auto_entitylabel_pattern_fancy_content_headine';
+  $strongarm->name = 'auto_entitylabel_pattern_fancy_content_headline';
   $strongarm->value = 'Headline created by [current-user:name] at [current-user:created:short]';
-  $export['auto_entitylabel_pattern_fancy_content_headine'] = $strongarm;
+  $export['auto_entitylabel_pattern_fancy_content_headline'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_fancy_content__headine';
+  $strongarm->name = 'field_bundle_settings_fancy_content__headline';
   $strongarm->value = array(
     'view_modes' => array(
       'inline_entity_form_preview' => array(
@@ -45,7 +45,7 @@ function fancy_content_headline_strongarm() {
       'display' => array(),
     ),
   );
-  $export['field_bundle_settings_fancy_content__headine'] = $strongarm;
+  $export['field_bundle_settings_fancy_content__headline'] = $strongarm;
 
   return $export;
 }

@@ -10,9 +10,9 @@
 function fancy_content_headline_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'fancy_content-headine-field_headline'
-  $field_instances['fancy_content-headine-field_headline'] = array(
-    'bundle' => 'headine',
+  // Exported field_instance: 'fancy_content-headline-field_headline'
+  $field_instances['fancy_content-headline-field_headline'] = array(
+    'bundle' => 'headline',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',

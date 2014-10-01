@@ -21,10 +21,10 @@ function fancy_content_headline_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function fancy_content_headline_eck_bundle_info() {
   $items = array(
-    'fancy_content_headine' => array(
-      'machine_name' => 'fancy_content_headine',
+    'fancy_content_headline' => array(
+      'machine_name' => 'fancy_content_headline',
       'entity_type' => 'fancy_content',
-      'name' => 'headine',
+      'name' => 'headline',
       'label' => 'Headine',
     ),
   );

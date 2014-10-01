@@ -12,9 +12,9 @@ function fancy_content_headline_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
-  $ds_layout->id = 'fancy_content|headine|default';
+  $ds_layout->id = 'fancy_content|headline|default';
   $ds_layout->entity_type = 'fancy_content';
-  $ds_layout->bundle = 'headine';
+  $ds_layout->bundle = 'headline';
   $ds_layout->view_mode = 'default';
   $ds_layout->layout = 'ds_reset';
   $ds_layout->settings = array(
@@ -34,13 +34,13 @@ function fancy_content_headline_ds_layout_settings_info() {
     'layout_link_attribute' => FALSE,
     'layout_link_custom' => '',
   );
-  $export['fancy_content|headine|default'] = $ds_layout;
+  $export['fancy_content|headline|default'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
-  $ds_layout->id = 'fancy_content|headine|inline_entity_form_preview';
+  $ds_layout->id = 'fancy_content|headline|inline_entity_form_preview';
   $ds_layout->entity_type = 'fancy_content';
-  $ds_layout->bundle = 'headine';
+  $ds_layout->bundle = 'headline';
   $ds_layout->view_mode = 'inline_entity_form_preview';
   $ds_layout->layout = 'ds_reset';
   $ds_layout->settings = array(
@@ -60,7 +60,7 @@ function fancy_content_headline_ds_layout_settings_info() {
     'layout_link_attribute' => FALSE,
     'layout_link_custom' => '',
   );
-  $export['fancy_content|headine|inline_entity_form_preview'] = $ds_layout;
+  $export['fancy_content|headline|inline_entity_form_preview'] = $ds_layout;
 
   return $export;
 }
