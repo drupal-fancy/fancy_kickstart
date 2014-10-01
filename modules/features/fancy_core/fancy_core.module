@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Fancy Core feature.
- */
-
-include_once 'fancy_core.features.inc';

@@ -57,6 +57,11 @@ projects[] = strongarm
 projects[] = views_bulk_operations
 projects[wysiwyg][version] = 2.x-dev
 
+; Fancy features
+projects[fancy_features][type] = module
+projects[fancy_features][download][type] = git
+projects[fancy_features][download][branch] = 7.x-1.x
+
 ; Helper modules
 projects[ctools_field][type] = module
 projects[ctools_field][download][type] = git
