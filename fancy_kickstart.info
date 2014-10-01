@@ -26,6 +26,7 @@ dependencies[] = ds
 dependencies[] = ds_extras
 dependencies[] = final_polish
 dependencies[] = globalredirect
+dependencies[] = migrate_ui
 dependencies[] = module_filter
 dependencies[] = pathauto
 dependencies[] = pathologic
