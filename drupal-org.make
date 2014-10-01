@@ -55,7 +55,7 @@ projects[] = migrate_extras
 projects[] = picture
 projects[] = strongarm
 projects[] = views_bulk_operations
-projects[] = wysiwyg
+projects[wysiwyg][version] = 2.x-dev
 
 ; Helper modules
 projects[ctools_field][type] = module
