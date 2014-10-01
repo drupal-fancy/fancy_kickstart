@@ -22,18 +22,6 @@ function fancy_kickstart_install_tasks($install_state) {
     'run' => INSTALL_TASK_RUN_IF_REACHED,
   );
 
-  $tasks['fancy_kickstart_configure_form'] = array(
-    'type' => 'form',
-    'display_name' => st('Configure features'),
-  );
-
-  $tasks['fancy_kickstart_install_additional_modules'] = array(
-    'type' => 'batch',
-    'display_name' => st('Install fancy modules'),
-    'display' => FALSE,
-    'run' => INSTALL_TASK_RUN_IF_REACHED,
-  );
-
   return $tasks;
 }
 
@@ -63,91 +51,6 @@ function fancy_kickstart_revert_features() {
     features_rebuild();
     features_revert();
   }
-}
-
-/**
- * Configuration task.
- */
-function fancy_kickstart_configure_form() {
-  $form = array('#tree' => TRUE);
-
-  $form['config'] = array(
-    '#type' => 'fieldset',
-    '#title' => st('Configure features'),
-  );
-
-  $form['config']['import'] = array(
-    '#type' => 'select',
-    '#title' => st('Which type of content you want to import?'),
-    '#description' => st('We prepared some demo content for lazy people.'),
-    '#options' => array(
-      'drupal' => st('Drupal'),
-      'kittens' => st('Kittens'),
-      'business' => st('Business'),
-    ),
-    '#empty_option' => st('- None -'),
-  );
-
-  $form['config']['content'] = array(
-    '#type' => 'checkboxes',
-    '#title' => st('Content elements'),
-    '#description' => st('Select types of content which should be available when creating new content.'),
-    '#options' => array(
-      'fancy_content_image' => st('Image'),
-      'fancy_content_headline' => st('Headline'),
-      'fancy_content_map' => st('Map'),
-      'fancy_content_wysiwyg' => st('Rich text (WYSIWYG enabled)'),
-      'fancy_content_slider' => st('Slider'),
-      'fancy_content_text' => st('Text'),
-      'fancy_content_video' => st('Video'),
-    ),
-    '#empty_option' => st('- None - '),
-  );
-
-  $form['config']['functionalities'] = array(
-    '#type' => 'checkboxes',
-    '#title' => st('Additional functionalities'),
-    '#description' => st('Do you need some other fancy stuff?'),
-    '#options' => array(
-      'fancy_grid' => st('Responsive website'),
-      'metatag' => st('SEO optimized'),
-    ),
-    '#empty_option' => st('- None - '),
-  );
-
-  $form['actions'] = array('#type' => 'actions');
-
-  $form['actions']['submit'] = array(
-    '#type' => 'submit',
-    '#value' => st('Create and Finish'),
-    '#weight' => 15,
-  );
-
-  return $form;
-}
-
-/**
- * Submit function for configuration form.
- */
-function fancy_kickstart_configure_form_submit(&$form, &$form_state) {
-  variable_set('fancy_kickstart_config', $form_state['values']['config']);
-}
-
-/**
- * Task callback for enable modules.
- */
-function fancy_kickstart_install_additional_modules() {
-  $config = variable_get('fancy_kickstart_config', array());
-  $modules = $config['content'] + $config['functionalities'];
-  $desired_modules = array();
-
-  foreach ($modules as $module_name => $enabled) {
-    if ($enabled) {
-      $desired_modules[] = $module_name;
-    }
-  }
-
-  module_enable($desired_modules);
 }
 
 /**
