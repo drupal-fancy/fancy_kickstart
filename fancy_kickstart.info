@@ -51,4 +51,4 @@ dependencies[] = fancy_section_simple
 dependencies[] = fancy_section_responsive
 
 ; Fancy Custom
-dependencies[] = fancy_content
+dependencies[] = fancy_migrate
