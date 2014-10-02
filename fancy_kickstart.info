@@ -36,6 +36,7 @@ dependencies[] = transliteration
 dependencies[] = fancy_core
 dependencies[] = fancy_page
 dependencies[] = fancy_config_fancy_grid
+dependencies[] = fancy_kickstart_helper
 
 ; Fancy Contents
 dependencies[] = fancy_content_ctools_content

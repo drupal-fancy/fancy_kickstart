@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_init.
+ *
+ * Injects our custom css into the website.
+ */
+function fancy_kickstart_helper_init() {
+  $module_path = drupal_get_path('module', 'fancy_kickstart_helper');
+
+  drupal_add_css($module_path . '/css/fancy_kickstart_helper.css');
+}
