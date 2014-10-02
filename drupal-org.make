@@ -94,5 +94,9 @@ libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEdi
 
 libraries[underscore][download][type] = file
 libraries[underscore][download][url] = https://github.com/jashkenas/underscore/archive/1.4.4.zip
+
+libraries[backbone][download][type] = file
+libraries[backbone][download][url] = https://github.com/jashkenas/backbone/archive/1.0.0.zip
+
 libraries[bgrins-spectrum][download][type] = file
 libraries[bgrins-spectrum][download][url] = https://codeload.github.com/bgrins/spectrum/zip/1.5.1
