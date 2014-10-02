@@ -40,7 +40,7 @@ projects[] = shiny
 ; Dependencies
 projects[] = auto_entitylabel
 projects[] = breakpoints
-projects[color_field][version] = 2.x-dev
+projects[color_field][version] = 1.x-dev
 projects[color_field][patch][] = https://www.drupal.org/files/issues/ds-token-support-for-region-classes-2288345-2.patch
 projects[] = css_field_formatters
 projects[] = eck
