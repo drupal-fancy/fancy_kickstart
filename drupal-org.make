@@ -98,5 +98,8 @@ libraries[underscore][download][url] = https://github.com/jashkenas/underscore/a
 libraries[backbone][download][type] = file
 libraries[backbone][download][url] = https://github.com/jashkenas/backbone/archive/1.0.0.zip
 
+libraries[modernizr][download][type] = file
+libraries[modernizr][download][url] = https://github.com/Modernizr/Modernizr/archive/v2.7.1.zip
+
 libraries[bgrins-spectrum][download][type] = file
 libraries[bgrins-spectrum][download][url] = https://codeload.github.com/bgrins/spectrum/zip/1.5.1
