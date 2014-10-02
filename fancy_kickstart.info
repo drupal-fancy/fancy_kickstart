@@ -18,7 +18,7 @@ dependencies[] = path
 dependencies[] = options
 
 ; Required modules (Contrib)
-dependencies[] = admin_menu
+dependencies[] = navbar
 dependencies[] = admin_menu_toolbar
 dependencies[] = backup_migrate
 dependencies[] = coffee
