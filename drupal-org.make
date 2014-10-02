@@ -92,5 +92,7 @@ projects[view_mode_selector][download][branch] = 7.x-1.x
 libraries[ckeditor][download][type] = file
 libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.4.5/ckeditor_4.4.5_full.zip
 
+libraries[underscore][download][type] = file
+libraries[underscore][download][url] = https://github.com/jashkenas/underscore/archive/1.4.4.zip
 libraries[bgrins-spectrum][download][type] = file
 libraries[bgrins-spectrum][download][url] = https://codeload.github.com/bgrins/spectrum/zip/1.5.1
