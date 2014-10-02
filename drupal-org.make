@@ -12,6 +12,7 @@ projects[] = module_filter
 
 ; Content
 projects[ds][version] = 2.x-dev
+projects[ds][patch][] = https://www.drupal.org/files/issues/ds-token-support-for-region-classes-2288345-2.patch
 projects[] = ctools
 projects[] = views
 
@@ -39,11 +40,15 @@ projects[] = shiny
 ; Dependencies
 projects[] = auto_entitylabel
 projects[] = breakpoints
+projects[color_field][version] = 2.x-dev
+projects[color_field][patch][] = https://www.drupal.org/files/issues/ds-token-support-for-region-classes-2288345-2.patch
+projects[] = css_field_formatters
 projects[] = eck
 projects[] = elements
 projects[] = entity
 projects[] = entityreference
 projects[] = features
+projects[] = field_formatter_css_class
 projects[file_entity][version] = 2.x-dev
 projects[] = gmap
 projects[inline_entity_form][version] = 1.x-dev
@@ -87,3 +92,5 @@ projects[view_mode_selector][download][branch] = 7.x-1.x
 libraries[ckeditor][download][type] = file
 libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.4.5/ckeditor_4.4.5_full.zip
 
+libraries[bgrins-spectrum][download][type] = file
+libraries[bgrins-spectrum][download][url] = https://codeload.github.com/bgrins/spectrum/zip/1.5.1
