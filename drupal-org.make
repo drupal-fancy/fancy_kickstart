@@ -58,6 +58,7 @@ projects[] = location
 projects[media][version] = 2.x-dev
 projects[] = migrate
 projects[] = migrate_extras
+projects[] = navbar
 projects[] = picture
 projects[] = strongarm
 projects[] = views_bulk_operations
