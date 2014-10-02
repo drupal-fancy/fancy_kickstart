@@ -95,7 +95,7 @@ libraries[ckeditor][download][type] = file
 libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.4.5/ckeditor_4.4.5_full.zip
 
 libraries[underscore][download][type] = file
-libraries[underscore][download][url] = https://github.com/jashkenas/underscore/archive/1.4.4.zip
+libraries[underscore][download][url] = https://github.com/jashkenas/underscore/archive/1.5.2.zip
 
 libraries[backbone][download][type] = file
 libraries[backbone][download][url] = https://github.com/jashkenas/backbone/archive/1.0.0.zip
