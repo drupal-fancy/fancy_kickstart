@@ -27,15 +27,19 @@ function fancy_kickstart_install_tasks($install_state) {
 
 /**
  * Task callback for setting Responsive Bartik as default theme
- * and use admin theme when creating content.
+ * and Shiny as admin theme.
  */
 function fancy_kickstart_set_themes() {
-  $theme = 'responsive_bartik';
+  $enable = array(
+    'theme_default' => 'responsive_bartik',
+    'admin_theme' => 'shiny',
+  );
+  theme_enable($enable);
 
-  variable_set('theme_default', $theme);
-  variable_set('node_admin_theme', '1');
+  foreach ($enable as $var => $theme) {
+    variable_set($var, $theme);
+  }
 
-  theme_enable(array($theme));
   theme_disable(array('bartik'));
 }
 
