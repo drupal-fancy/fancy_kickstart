@@ -4,7 +4,7 @@
 }
 
 /* Heading styles */
-.headline-bold {
+.fancy-content-headline.headline-bold {
     text-align: center;
     text-transform: uppercase;
     font-family: "Arial Black", sans-serif;
@@ -12,7 +12,7 @@
     letter-spacing: 10px;
 }
 
-.headline-3d {
+.fancy-content-headline.headline-3d {
     text-align: center;
     font-family: Arial, sans-serif;
     font-weight: bold;
@@ -33,7 +33,7 @@
     color: #fff;
 }
 
-.headline-letterpress {
+.fancy-content-headline.headline-letterpress {
     background: #DDD;
     padding: 0.1em 2em;
     font-family: Georgia, Times, serif;
@@ -41,12 +41,6 @@
     text-shadow: 1px 1px rgba(255,255,255,0.8);
     font-size: 1.5em;
     color: #999;
-}
-
-/* Fix strange bug in field_formatter_css_class. */
-body .entity-fancy-section {
-    background: inherit;
-    padding: inherit;
 }
 
 /* Fix bartik paragraph margins. */
