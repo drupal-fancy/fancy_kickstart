@@ -32,6 +32,7 @@ dependencies[] = pathologic
 dependencies[] = transliteration
 
 ; Fancy Features
+dependencies[] = fancy_features
 dependencies[] = fancy_core
 dependencies[] = fancy_page
 dependencies[] = fancy_config_fancy_grid
