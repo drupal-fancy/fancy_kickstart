@@ -41,7 +41,6 @@ projects[] = shiny
 projects[] = auto_entitylabel
 projects[] = breakpoints
 projects[color_field][version] = 1.x-dev
-projects[color_field][patch][] = https://www.drupal.org/files/issues/allow_using_no_color-2230889-2.patch
 projects[] = css_field_formatters
 projects[] = eck
 projects[] = elements
