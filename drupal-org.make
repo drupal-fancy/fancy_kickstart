@@ -103,5 +103,5 @@ libraries[backbone][download][url] = https://github.com/jashkenas/backbone/archi
 libraries[modernizr][download][type] = file
 libraries[modernizr][download][url] = https://github.com/Modernizr/Modernizr/archive/v2.7.1.zip
 
-libraries[bgrins-spectrum][download][type] = file
-libraries[bgrins-spectrum][download][url] = https://codeload.github.com/bgrins/spectrum/zip/1.5.1
+libraries[colorpicker][download][type] = file
+libraries[colorpicker][download][url] = http://www.eyecon.ro/colorpicker/colorpicker.zip
