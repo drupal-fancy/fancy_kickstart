@@ -48,8 +48,8 @@ function fancy_kickstart_set_themes() {
  */
 function fancy_kickstart_revert_features() {
   if (module_exists('features')) {
-    features_rebuild();
-    features_revert();
+    //features_rebuild();
+    //features_revert();
   }
 }
 
