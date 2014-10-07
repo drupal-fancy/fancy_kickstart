@@ -48,7 +48,6 @@ dependencies[] = fancy_content_text
 dependencies[] = fancy_content_rich_text
 
 ; Fancy Sections
-dependencies[] = fancy_section_simple
 dependencies[] = fancy_section_responsive
 
 ; Fancy Custom
