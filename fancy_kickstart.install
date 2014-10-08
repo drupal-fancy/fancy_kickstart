@@ -61,6 +61,31 @@ function fancy_kickstart_revert_features() {
  * @see system_install()
  */
 function fancy_kickstart_install() {
+  // Import demo content.
+  if (module_exists('migrate') && module_exists('fancy_migrate')) {
+    $migrations = array(
+      'MediaImage',
+      'ContentHeadline',
+      'ContentImage',
+      'ContentMap',
+      'ContentRichText',
+      'ContentText',
+      'Section',
+      'Page',
+    );
+
+    // Register all migrations.
+    migrate_get_module_apis(TRUE);
+
+    foreach ($migrations as $migration_name) {
+      $migration = Migration::getInstance($migration_name);
+      $migration->processImport();
+    }
+
+    // Set frontpage to new created fancy page.
+    variable_set('site_frontpage', 'node/1');
+  }
+
   // Add text formats.
   $filtered_html_format = array(
     'format' => 'filtered_html',
