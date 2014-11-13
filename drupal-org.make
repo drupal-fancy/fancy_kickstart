@@ -12,7 +12,6 @@ projects[] = module_filter
 
 ; Content
 projects[ds][version] = 2.x-dev
-projects[ds][patch][] = https://www.drupal.org/files/issues/ds-token-support-for-region-classes-2288345-2.patch
 projects[] = ctools
 projects[] = views
 
