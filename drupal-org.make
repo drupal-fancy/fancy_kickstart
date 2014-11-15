@@ -51,6 +51,7 @@ projects[file_entity][version] = 2.x-dev
 projects[] = gmap
 projects[inline_entity_form][version] = 1.x-dev
 projects[inline_entity_form][patch][] = https://www.drupal.org/files/issues/inline_entity_form-pass_render_arguments-2375895-4.patch
+projects[inline_entity_form][patch][] = https://www.drupal.org/files/issues/inline_entity_form-pass_render_arguments-2375895-2.patch
 projects[] = libraries
 projects[] = location
 projects[media][version] = 2.x-dev
