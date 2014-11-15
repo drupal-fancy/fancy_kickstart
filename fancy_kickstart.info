@@ -34,10 +34,13 @@ dependencies[] = transliteration
 ; Fancy Features
 dependencies[] = fancy_features
 dependencies[] = fancy_core
-dependencies[] = fancy_page
 dependencies[] = fancy_config_fancy_grid
 dependencies[] = fancy_config_media
 dependencies[] = fancy_kickstart_helper
+
+; Fancy Node Types
+dependencies[] = fancy_page
+dependencies[] = fancy_simple_page
 
 ; Fancy Contents
 dependencies[] = fancy_content_ctools_content
