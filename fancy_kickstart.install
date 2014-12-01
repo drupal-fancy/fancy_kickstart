@@ -71,6 +71,7 @@ function fancy_kickstart_install() {
       'ContentRichText',
       'ContentText',
       'Section',
+      'SimplePage',
       'Page',
     );
 
