@@ -228,4 +228,7 @@ function fancy_kickstart_install() {
   // Display Suite Field Template.
   variable_set('ds_extras_field_template', 1);
   variable_set('ft-default', 'theme_ds_field_reset');
+
+  // Use admin theme when editing content.
+  variable_set('node_admin_theme', '1');
 }
