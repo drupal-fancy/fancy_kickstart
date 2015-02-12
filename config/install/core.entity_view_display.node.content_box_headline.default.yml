@@ -1,0 +1,45 @@
+uuid: 4c27c8cc-7935-4887-9300-d5ae14f3603f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.content_box_headline.body
+    - field.field.node.content_box_headline.field_headline
+    - field.field.node.content_box_headline.field_link
+    - node.type.content_box_headline
+  module:
+    - link
+    - text
+    - user
+id: node.content_box_headline.default
+targetEntityType: node
+bundle: content_box_headline
+mode: default
+content:
+  links:
+    weight: 100
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_headline:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_link:
+    weight: 103
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+hidden: {  }

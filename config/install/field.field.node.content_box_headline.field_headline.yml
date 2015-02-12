@@ -1,0 +1,21 @@
+uuid: 689c2da1-e728-45fd-bf4e-7879e7104811
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_headline
+    - node.type.content_box_headline
+id: node.content_box_headline.field_headline
+field_name: field_headline
+entity_type: node
+bundle: content_box_headline
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

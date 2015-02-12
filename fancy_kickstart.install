@@ -1,235 +1,39 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for the Fancy Kickstart install profile.
+ * Install, update and uninstall functions for Fancy Kickstart installation
+ * profile.
  */
 
-/**
- * Implements hook_install_tasks().
- */
-function fancy_kickstart_install_tasks($install_state) {
-  $tasks = array();
-
-  $tasks['fancy_kickstart_set_themes'] = array(
-    'type' => 'batch',
-    'display' => FALSE,
-    'run' => INSTALL_TASK_RUN_IF_REACHED,
-   );
-
-  $tasks['fancy_kickstart_revert_features'] = array(
-    'type' => 'batch',
-    'display' => FALSE,
-    'run' => INSTALL_TASK_RUN_IF_REACHED,
-  );
-
-  return $tasks;
-}
-
-/**
- * Task callback for setting Responsive Bartik as default theme
- * and Shiny as admin theme.
- */
-function fancy_kickstart_set_themes() {
-  $enable = array(
-    'theme_default' => 'responsive_bartik',
-    'admin_theme' => 'shiny',
-  );
-  theme_enable($enable);
-
-  foreach ($enable as $var => $theme) {
-    variable_set($var, $theme);
-  }
-
-  theme_disable(array('bartik'));
-}
-
-/**
- * Task callback for reverting all features.
- */
-function fancy_kickstart_revert_features() {
-  if (module_exists('features')) {
-    //features_rebuild();
-    //features_revert();
-  }
-}
+use Drupal\user\Entity\User;
 
 /**
  * Implements hook_install().
  *
- * Performs actions to set up the site for this profile.
+ * Perform actions to set up the site for this profile.
  *
  * @see system_install()
  */
-function fancy_kickstart_install() {
-  // Import demo content.
-  if (module_exists('migrate') && module_exists('fancy_migrate')) {
-    $migrations = array(
-      'MediaImage',
-      'ContentHeadline',
-      'ContentImage',
-      'ContentMap',
-      'ContentRichText',
-      'ContentText',
-      'Section',
-      'SimplePage',
-      'Page',
-    );
+function wk_install() {
+  // Now that all modules are installed, make sure the entity storage and other
+  // handlers are up to date with the current entity and field definitions. For
+  // example, Path module adds a base field to nodes and taxonomy terms after
+  // those modules are already installed.
+  \Drupal::service('entity.definition_update_manager')->applyUpdates();
 
-    // Register all migrations.
-    migrate_get_module_apis(TRUE);
-
-    foreach ($migrations as $migration_name) {
-      $migration = Migration::getInstance($migration_name);
-      $migration->processImport();
-    }
-
-    // Set frontpage to new created fancy page.
-    variable_set('site_frontpage', 'node/1');
-  }
-
-  // Add text formats.
-  $filtered_html_format = array(
-    'format' => 'filtered_html',
-    'name' => 'Filtered HTML',
-    'weight' => 0,
-    'filters' => array(
-      // URL filter.
-      'filter_url' => array(
-        'weight' => 0,
-        'status' => 1,
-      ),
-      // HTML filter.
-      'filter_html' => array(
-        'weight' => 1,
-        'status' => 1,
-      ),
-      // Line break filter.
-      'filter_autop' => array(
-        'weight' => 2,
-        'status' => 1,
-      ),
-      // HTML corrector filter.
-      'filter_htmlcorrector' => array(
-        'weight' => 10,
-        'status' => 1,
-      ),
-      // Pathauto filter.
-      'pathauto' => array(
-        'weight' => 50,
-        'status' => 1
-      ),
-    ),
-  );
-
-  $filtered_html_format = (object) $filtered_html_format;
-  filter_format_save($filtered_html_format);
-
-  $full_html_format = array(
-    'format' => 'full_html',
-    'name' => 'Full HTML',
-    'weight' => 1,
-    'filters' => array(
-      // URL filter.
-      'filter_url' => array(
-        'weight' => 0,
-        'status' => 1,
-      ),
-      // Line break filter.
-      'filter_autop' => array(
-        'weight' => 1,
-        'status' => 1,
-      ),
-      // HTML corrector filter.
-      'filter_htmlcorrector' => array(
-        'weight' => 10,
-        'status' => 1,
-      ),
-      // Pathauto filter.
-      'pathauto' => array(
-        'weight' => 50,
-        'status' => 1
-      ),
-    ),
-  );
-
-  $full_html_format = (object) $full_html_format;
-  filter_format_save($full_html_format);
-
-  // Enable some standard blocks.
-  $default_theme = variable_get('theme_default', 'responsive_bartik');
-  $values = array(
-    array(
-      'module' => 'system',
-      'delta' => 'main',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => 0,
-      'region' => 'content',
-      'pages' => '',
-      'cache' => -1,
-    ),
-    array(
-      'module' => 'system',
-      'delta' => 'help',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => 0,
-      'region' => 'help',
-      'pages' => '',
-      'cache' => -1,
-    ),
-  );
-  $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache'));
-  foreach ($values as $record) {
-    $query->values($record);
-  }
-  $query->execute();
-
-  // Only administrators can create user accounts.
-  variable_set('user_register', USER_REGISTER_ADMINISTRATORS_ONLY);
-
-   // Enable default permissions for system roles.
-  $filtered_html_permission = filter_permission_name($filtered_html_format);
-  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', $filtered_html_permission));
-  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', $filtered_html_permission));
-
-  // Create a default role for site administrators, with all available permissions assigned.
-  $admin_role = new stdClass();
-  $admin_role->name = 'administrator';
-  $admin_role->weight = 2;
-  user_role_save($admin_role);
-  user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+  // Enable all permissions for the administrator role.
+  user_role_grant_permissions('administrator', array_keys(\Drupal::service('user.permissions')->getPermissions()));
   // Set this as the administrator role.
-  variable_set('user_admin_role', $admin_role->rid);
+  $user_settings->set('admin_role', 'administrator')->save();
 
   // Assign user 1 the "administrator" role.
-  db_insert('users_roles')
-    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
-    ->execute();
+  $user = User::load(1);
+  $user->roles[] = 'administrator';
+  $user->save();
 
-  // Create a Home link in the main menu.
-  $item = array(
-    'link_title' => st('Home'),
-    'link_path' => '<front>',
-    'menu_name' => 'main-menu',
-  );
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access site-wide contact form'));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access site-wide contact form'));
 
-  menu_link_save($item);
-
-  // Update the menu router information.
-  menu_rebuild();
-
-  // Module filter dynamic save button.
-  variable_set('module_filter_dynamic_save_position', 1);
-
-  // Pathauto patterns.
-  variable_set('pathauto_node_pattern', '[node:title]');
-  variable_set('pathauto_user_pattern', '');
-
-  // Display Suite Field Template.
-  variable_set('ds_extras_field_template', 1);
-  variable_set('ft-default', 'theme_ds_field_reset');
-
-  // Use admin theme when editing content.
-  variable_set('node_admin_theme', '1');
+  // Allow authenticated users to use shortcuts.
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access shortcuts'));
 }

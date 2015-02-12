@@ -1,0 +1,18 @@
+uuid: 12a241ef-dac8-4ac3-9e00-b15fed211725
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Fancy page'
+type: fancy_page
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

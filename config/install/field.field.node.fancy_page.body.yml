@@ -1,0 +1,22 @@
+uuid: 2830f29a-501a-43eb-8007-0765cee8b7f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.fancy_page
+  module:
+    - text
+id: node.fancy_page.body
+field_name: body
+entity_type: node
+bundle: fancy_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

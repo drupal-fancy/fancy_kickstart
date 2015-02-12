@@ -1,4 +1,0 @@
-name = Fancy Kickstart Helper
-description = Small helper module with some CSS fixes to improve the visual appeal of the demo.
-core = 7.x
-package = Fancy Kickstart

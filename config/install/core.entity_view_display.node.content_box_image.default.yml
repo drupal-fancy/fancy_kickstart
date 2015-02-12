@@ -1,0 +1,17 @@
+uuid: 0d68b68e-b848-4ac1-9a49-7325f16f2490
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.content_box_image
+  module:
+    - user
+id: node.content_box_image.default
+targetEntityType: node
+bundle: content_box_image
+mode: default
+content:
+  links:
+    weight: 100
+hidden:
+  body: true

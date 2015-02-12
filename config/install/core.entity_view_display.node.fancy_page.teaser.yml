@@ -1,0 +1,29 @@
+uuid: 473ca26d-fb33-41a3-ab00-a5ae1128305f
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.fancy_page.body
+    - field.field.node.fancy_page.field_content_boxes
+    - node.type.fancy_page
+  module:
+    - text
+    - user
+id: node.fancy_page.teaser
+targetEntityType: node
+bundle: fancy_page
+mode: teaser
+content:
+  links:
+    weight: 100
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+hidden:
+  field_content_boxes: true
+  field_view: true

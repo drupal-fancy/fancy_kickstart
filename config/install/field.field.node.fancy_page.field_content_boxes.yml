@@ -1,0 +1,27 @@
+uuid: 69070854-9a41-437b-af00-f06885fd81ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_boxes
+    - node.type.fancy_page
+  module:
+    - entity_reference
+id: node.fancy_page.field_content_boxes
+field_name: field_content_boxes
+entity_type: node
+bundle: fancy_page
+label: 'Content boxes'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings:
+    target_bundles:
+      content_box_headline: content_box_headline
+    sort:
+      field: _none
+field_type: entity_reference

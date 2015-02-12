@@ -1,0 +1,17 @@
+uuid: d0f3d682-8abb-45c7-a300-aeacc859f49a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: 'main:'
+name: Image
+type: content_box_image
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

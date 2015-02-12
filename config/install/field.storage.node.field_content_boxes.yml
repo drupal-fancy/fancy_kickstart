@@ -1,0 +1,19 @@
+uuid: 13a74ec5-db65-4e91-8509-9cb3cfced6b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference
+    - node
+id: node.field_content_boxes
+field_name: field_content_boxes
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: entity_reference
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false

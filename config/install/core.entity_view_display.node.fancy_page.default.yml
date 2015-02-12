@@ -1,0 +1,35 @@
+uuid: ce3b7eb2-9f4e-4cd8-9838-56f13b5a07db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.fancy_page.body
+    - field.field.node.fancy_page.field_content_boxes
+    - node.type.fancy_page
+  module:
+    - text
+    - user
+id: node.fancy_page.default
+targetEntityType: node
+bundle: fancy_page
+mode: default
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    label: hidden
+  field_content_boxes:
+    type: entity_reference_label
+    weight: 102
+    settings:
+      link: true
+    third_party_settings: {  }
+    label: above
+hidden:
+  field_view: true

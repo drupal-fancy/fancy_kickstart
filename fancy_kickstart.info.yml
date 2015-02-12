@@ -1,0 +1,32 @@
+name: Fancy Kickstart
+type: profile
+description: 'Start with a fancy pre-configured Drupal website.'
+core: 8.x
+dependencies:
+  - node
+  - block
+  - breakpoint
+  - ckeditor
+  - config
+  - contextual
+  - menu_link_content
+  - datetime
+  - quickedit
+  - editor
+  - entity_reference
+  - help
+  - image
+  - menu_ui
+  - options
+  - path
+  - dblog
+  - shortcut
+  - toolbar
+  - field_ui
+  - file
+  - views
+  - views_ui
+  - tour
+themes:
+  - bartik
+  - seven
