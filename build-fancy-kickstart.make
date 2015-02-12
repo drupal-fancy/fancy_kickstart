@@ -1,7 +1,7 @@
 core = 8.x
 api = 2
 
-includes[] = https://raw.githubusercontent.com/drupal-fancy/fancy_kickstart/8.x-1.x/drupal-org-core.make
+includes[] = http://cgit.drupalcode.org/fancy_kickstart/plain/drupal-org-core.make?h=8.x-1.x
 
 ; Installation profile
 projects[fancy_kickstart][type] = profile
