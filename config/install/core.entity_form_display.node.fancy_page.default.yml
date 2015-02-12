@@ -7,6 +7,9 @@ dependencies:
     - field.field.node.fancy_page.field_content_boxes
     - node.type.fancy_page
   module:
+    - entity_reference
+    - inline_entity_form
+    - inline_entity_form_preview
     - path
     - text
 id: node.fancy_page.default
@@ -28,6 +31,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      autocomplete_type: tags
     third_party_settings: {  }
   created:
     type: datetime_timestamp
@@ -36,15 +40,15 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
+    weight: 15
     settings:
       display_label: true
-    weight: 15
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
+    weight: 16
     settings:
       display_label: true
-    weight: 16
     third_party_settings: {  }
   path:
     type: path
@@ -60,12 +64,21 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_content_boxes:
+    type: inline_entity_form_multiple
     weight: 32
     settings:
+      allow_existing: 0
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
+      delete_references: 0
+      override_labels: 0
+      label_singular: ''
+      label_plural: ''
+    third_party_settings:
+      inline_entity_form_preview:
+        preview:
+          enable: 1
+          view_mode: teaser
+          fallback_view_mode: ''
 hidden:
   field_view: true
+third_party_settings: {  }
