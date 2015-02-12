@@ -1,4 +1,4 @@
-core = 8.0.0-beta6
+core = 8.x
 api = 2
 
 defaults[projects][subdir] = contrib

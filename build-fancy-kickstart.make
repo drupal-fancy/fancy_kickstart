@@ -1,4 +1,4 @@
-core = 8.0.0-beta6
+core = 8.x
 api = 2
 
 includes[] = https://raw.githubusercontent.com/drupal-fancy/fancy_kickstart/8.x-1.x/drupal-org-core.make
