@@ -10,5 +10,5 @@ projects[inline_entity_form][download][branch] = 8.x-1.x
 
 projects[inline_entity_form_preview][type] = module
 projects[inline_entity_form_preview][download][type] = git
-projects[inline_entity_form_preview][download][url] = https://github.com/drupal-fancy/inline_entity_form_preview.git
+projects[inline_entity_form_preview][download][url] = http://git.drupal.org/project/inline_entity_form_preview.git
 projects[inline_entity_form_preview][download][branch] = 8.x-1.x
