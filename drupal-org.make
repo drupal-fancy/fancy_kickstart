@@ -5,7 +5,7 @@ defaults[projects][subdir] = contrib
 
 projects[inline_entity_form][type] = module
 projects[inline_entity_form][download][type] = git
-projects[inline_entity_form][download][url] = https://github.com/axe312ger/inline_entity_form.git
+projects[inline_entity_form][download][url] = http://git.drupal.org/sandbox/axe312/2425359.git
 projects[inline_entity_form][download][branch] = 8.x-1.x
 
 projects[inline_entity_form_preview][type] = module
